@@ -1,0 +1,19 @@
+---
+execution:
+- executor: selenium
+  scenario:
+    script: ./selenium_python_chrome_script1.py
+  concurrency: 2
+  ramp-up: 15s
+  hold-for: 2m
+  iterations: 5
+
+modules:
+  selenium:
+    chromedriver:
+      version: 116.0.5845.96   # desirable driver version
+      path: C:\Users\DELL\.bzt\selenium-taurus\tools\drivers\chromedriver\116.0.5845.96\chromedriver-win64\chromedriver.exe
+      
+    geckodriver:
+      version: 0.33.0
+      path: C:\Users\DELL\.bzt\selenium-taurus\tools\drivers\geckodriver\0.33.0\geckodriver.exe
